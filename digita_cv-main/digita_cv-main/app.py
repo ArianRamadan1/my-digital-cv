@@ -27,7 +27,10 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic_file)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigate", ["Home", "About"])
+page = st.sidebar.radio(
+    "Navigate",
+    ["Home", "Projects", "About"]
+)
 
 if page == "Home":
     # --- HERO SECTION ---
@@ -152,7 +155,63 @@ if page == "Home":
 - ► Practiced Linux command-line operations for file and user management.
 """
     )
+elif page == "Projects":
+    st.title("💻 Projects")
 
+    st.write(
+        """
+        Here are some of the projects I have worked on during my studies
+        and personal learning journey.
+        """
+    )
+
+    st.write("---")
+
+    # Project 1
+    st.subheader("📊 Student Management Dashboard")
+    st.write(
+        """
+        - Built with Python and Streamlit
+        - Displays student records and statistics
+        - Includes basic data visualization
+        """
+    )
+
+    st.write("---")
+
+    # Project 2
+    st.subheader("🌐 Network Simulation")
+    st.write(
+        """
+        - Designed a small office LAN
+        - Configured routers and switches
+        - Tested IP connectivity using Cisco Packet Tracer
+        """
+    )
+
+    st.write("---")
+
+    # Project 3
+    st.subheader("📁 Digital CV Website")
+    st.write(
+        """
+        - Responsive CV and portfolio page
+        - Built using HTML, CSS, and Streamlit
+        - Includes resume download feature
+        """
+    )
+
+    st.write("---")
+
+    # Project 4
+    st.subheader("🐍 Python Data Analysis")
+    st.write(
+        """
+        - Cleaned and analyzed datasets using Pandas
+        - Created charts with Matplotlib
+        - Generated summary statistics and reports
+        """
+    )
 elif page == "About":
     st.title("About Me")
     st.write("""
