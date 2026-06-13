@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | "
@@ -15,7 +16,7 @@ LINKEDIN_URL = "https://www.linkedin.com/in/arianramadani"
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 # Directly reference files in the assets folder (ensure it exists)
-current_dir = Path(file).parent if "file" in locals() else Path.cwd()
+current_dir = Path(__file__).parent
 
 resume_file = current_dir / "assets" / "egezon_cv_12_2024.pdf"
 profile_pic_file = current_dir / "assets" / "dummy.png"
