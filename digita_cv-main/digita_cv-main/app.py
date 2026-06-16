@@ -29,7 +29,7 @@ profile_pic = Image.open(profile_pic_file)
 # Sidebar navigation
 page = st.sidebar.radio(
     "Navigate",
-    ["Home", "Projects", "About"]
+    ["Home", "Projects", "Lessons", "About"]
 )
 
 if page == "Home":
@@ -212,6 +212,34 @@ elif page == "Projects":
         - Generated summary statistics and reports
         """
     )
+    elif page == "Lessons":
+
+    st.title("📚 Lessons")
+
+    lesson = st.selectbox(
+        "Select Lecture",
+        ["lecture_12"]
+    )
+
+    if lesson == "lecture_12":
+        st.subheader("Lecture 12")
+
+        st.write("""
+        This is dummy content for Lecture 12.
+
+        Topics covered:
+        - Introduction to Data Analysis
+        - Data Cleaning
+        - Pandas Basics
+        - Visualization Fundamentals
+        """)
+
+        st.code("""
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+print(df.head())
+""", language="python")
 elif page == "About":
     st.title("About Me")
     st.write("""
