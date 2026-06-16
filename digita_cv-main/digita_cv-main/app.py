@@ -205,7 +205,7 @@ elif page == "Projects":
 
     # Project 4
     st.subheader("🐍 Python Data Analysis")
-       st.write(
+    st.write(
         """
         - Cleaned and analyzed datasets using Pandas
         - Created charts with Matplotlib
