@@ -245,9 +245,7 @@ print(df.head())
 elif lesson == "lecture_13":
     st.subheader("Lecture 13")
 
-    st.write("""
-    Lecture 13 not held yet
-    """)
+    st.write("Lecture 13 not held yet.")
 
 elif page == "About":
     st.title("About Me")
