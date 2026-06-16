@@ -218,9 +218,9 @@ elif page == "Lessons":
     st.title("📚 Lessons")
 
     lesson = st.selectbox(
-        "Select Lecture",
-        ["lecture_12"]
-    )
+    "Select Lecture",
+    ["lecture_12", "lecture_13"]
+)
 
     if lesson == "lecture_12":
         st.subheader("Lecture 12")
@@ -241,6 +241,14 @@ import pandas as pd
 df = pd.read_csv("data.csv")
 print(df.head())
 """, language="python")
+        
+elif lesson == "lecture_13":
+    st.subheader("Lecture 13")
+
+    st.write("""
+    Lecture 13 not held yet
+    """)
+
 elif page == "About":
     st.title("About Me")
     st.write("""
