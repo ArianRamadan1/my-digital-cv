@@ -225,7 +225,7 @@ elif page == "Lessons":
     if lesson == "lecture_12":
         st.subheader("Lecture 12")
 
-    st.markdown("""
+        st.markdown("""
 # Lecture 12 Summary
 
 ## SQL (Structured Query Language)
@@ -302,7 +302,7 @@ Uses the DataFrame API in Python, Scala, or Java. It provides greater flexibilit
 
 Both approaches operate on the same Iceberg tables and often deliver similar performance, with the choice depending mainly on developer preference and use case.
     """)
-elif lesson == "lecture_13":
+    elif lesson == "lecture_13":
         st.subheader("Lecture 13")
         st.write("Lecture 13 not held yet.")
 
