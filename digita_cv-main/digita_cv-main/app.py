@@ -222,7 +222,7 @@ elif page == "Lessons":
     ["lecture_12", "lecture_13"]
 )
 
-    if lesson == "lecture_12":
+if lesson == "lecture_12":
     st.subheader("Lecture 12")
 
     st.markdown("""
