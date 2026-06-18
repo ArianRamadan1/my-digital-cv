@@ -218,12 +218,12 @@ elif page == "Lessons":
     st.title("📚 Lessons")
 
     lesson = st.selectbox(
-    "Select Lecture",
-    ["lecture_12", "lecture_13"]
-)
+        "Select Lecture",
+        ["lecture_12", "lecture_13"]
+    )
 
-if lesson == "lecture_12":
-    st.subheader("Lecture 12")
+    if lesson == "lecture_12":
+        st.subheader("Lecture 12")
 
     st.markdown("""
 # Lecture 12 Summary
@@ -303,7 +303,8 @@ Uses the DataFrame API in Python, Scala, or Java. It provides greater flexibilit
 Both approaches operate on the same Iceberg tables and often deliver similar performance, with the choice depending mainly on developer preference and use case.
     """)
 elif lesson == "lecture_13":
-    st.success("TEST - Lecture 13 works")
+        st.subheader("Lecture 13")
+        st.write("Lecture 13 not held yet.")
 
 elif page == "About":
     st.title("About Me")
