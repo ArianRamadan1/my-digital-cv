@@ -223,28 +223,87 @@ elif page == "Lessons":
 )
 
     if lesson == "lecture_12":
-        st.subheader("Lecture 12")
+    st.subheader("Lecture 12")
 
-        st.write("""
-        This is dummy content for Lecture 12.
+    st.markdown("""
+# Lecture 12 Summary
 
-        Topics covered:
-        - Introduction to Data Analysis
-        - Data Cleaning
-        - Pandas Basics
-        - Visualization Fundamentals
-        """)
+## SQL (Structured Query Language)
+SQL is the standard language used to communicate with relational databases. It allows users to create, retrieve, update, and delete data, as well as define database structures and manage permissions.
 
-        st.code("""
-import pandas as pd
+## Star Schema vs Snowflake Schema
+A Star Schema consists of a central fact table connected directly to denormalized dimension tables. It is simple and provides fast query performance.
 
-df = pd.read_csv("data.csv")
-print(df.head())
-""", language="python")
-        
+A Snowflake Schema is an extension of the Star Schema where dimension tables are normalized into multiple related tables. It reduces redundancy but increases complexity and may require more joins.
+
+## What Is Database Normalization?
+Database normalization is the process of organizing data to reduce redundancy and improve data integrity. It divides large tables into smaller related tables and establishes relationships between them.
+
+## Introduction to Database Normalization
+Normalization aims to eliminate duplicate data and ensure that each piece of information is stored only once. Common normalization levels include First Normal Form (1NF), Second Normal Form (2NF), and Third Normal Form (3NF).
+
+## Slowly Changing Dimensions (SCD)
+Slowly Changing Dimensions are techniques used in data warehouses to manage changes in dimension data over time.
+
+- Type 1: Overwrites old values.
+- Type 2: Creates a new record for each change.
+- Type 3: Stores both old and new values in the same record.
+
+## Relationships in SQL
+Relationships define how tables are connected.
+
+- One-to-One: One record relates to one record.
+- One-to-Many: One record relates to multiple records.
+- Many-to-Many: Multiple records relate to multiple records through a junction table.
+
+## Database vs Data Warehouse vs Data Mart vs Data Lake
+
+### Database
+Used for day-to-day transactions and operational systems.
+
+### Data Warehouse
+Stores integrated historical data from multiple sources for reporting and analytics.
+
+### Data Mart
+A smaller, department-focused subset of a data warehouse.
+
+### Data Lake
+Stores large volumes of structured, semi-structured, and unstructured data in its raw format.
+
+## OLTP vs OLAP
+
+### OLTP (Online Transaction Processing)
+- Supports daily business operations.
+- Handles many small transactions.
+- Optimized for inserts, updates, and deletes.
+- Example: Banking systems, e-commerce websites.
+
+### OLAP (Online Analytical Processing)
+- Supports analytical and reporting workloads.
+- Handles complex queries on large datasets.
+- Optimized for reading and analysis.
+- Example: Business Intelligence dashboards.
+
+## DBMS vs RDBMS
+
+### DBMS (Database Management System)
+A software system used to store and manage data. Data may not be organized in tables and relationships are not always enforced.
+
+### RDBMS (Relational Database Management System)
+A type of DBMS that stores data in related tables and enforces relationships using primary keys and foreign keys. Examples include MySQL, PostgreSQL, and SQL Server.
+
+## Apache Iceberg: Spark SQL vs Spark DataFrames
+
+### Spark SQL
+Uses SQL syntax to query and manipulate Apache Iceberg tables. It is easier for users familiar with SQL and is commonly used for analytics.
+
+### Spark DataFrames
+Uses the DataFrame API in Python, Scala, or Java. It provides greater flexibility for programming, transformations, and integration with Spark applications.
+
+Both approaches operate on the same Iceberg tables and often deliver similar performance, with the choice depending mainly on developer preference and use case.
+    """)
 elif lesson == "lecture_13":
-    st.subheader("Lecture 13")
-    st.markdown("**Lecture 13 not held yet.**")
+    st.success("TEST - Lecture 13 works")
 
 elif page == "About":
     st.title("About Me")
